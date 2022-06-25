@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {%block title%}{{title}}{%endblock%} {% block content
+%}
+
+<section class="text-center">
+  <div class="row py-lg-5 mb-10 my-auto">
+    <div class="col-lg-6 col-md-8 mx-auto">
+      <h1 class="fw-light">Welcome to Hello App !!</h1>
+      <p class="lead text-muted">
+        This is a test webapp with some common functionalities to test various
+        needs for development, environment setup, devops tools connectivity and
+        workflows.
+      </p>
+      <form
+        action="{{ url_for('greet') }}"
+        method="post"
+        class="row g-3 text-center d-inline-flex"
+      >
+        <div class="col-auto">
+          <label for="inputValue" class="visually-hidden">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputValue"
+            name="inputValue"
+            placeholder="Name"
+          />
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary mb-3">Greet</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+{%endblock%}
