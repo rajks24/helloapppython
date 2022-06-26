@@ -11,9 +11,9 @@
         workflows.
       </p>
       <form
-        action="{{ url_for('greet') }}"
+        action="/greet"
         method="post"
-        class="row g-3 text-center d-inline-flex"
+        class="row py-3 g-3 text-center d-inline-flex"
       >
         <div class="col-auto">
           <label for="inputValue" class="visually-hidden">Name</label>
@@ -30,6 +30,7 @@
         </div>
       </form>
     </div>
+    {%if serv_info %} {% include '_serv_info.html' %} {%endif%}
   </div>
 </section>
 {%endblock%}
