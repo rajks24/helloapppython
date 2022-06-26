@@ -16,13 +16,15 @@ and workflows.
   `http://localhost:5000/appver?val=<New-version>`
 
 - Api to greet a user for the webapp
-  `http://localhost:5000/greet/<user-Name>`
+  `http://localhost:5000/greet/<name>`
+  `http://localhost:5000/api/greet/<name>`
+
+- Api for server info
+  `http://localhost:5000/api/info`
 
 ### Functionalities
 
 1. Update app version
 2. Greet user with POST method
-
-### TODO's
-
-1. Add Api docs
+3. Get server info, once deployed on Kubernetes
+4. Use with gui or with api based on need and workflow
