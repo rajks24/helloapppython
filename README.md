@@ -13,13 +13,17 @@ and workflows.
 ### Api's for the app
 
 - Api to update the app version
+
   `http://localhost:5000/appver?val=<New-version>`
 
 - Api to greet a user for the webapp
+
   `http://localhost:5000/greet/<name>`
+  
   `http://localhost:5000/api/greet/<name>`
 
 - Api for server info
+
   `http://localhost:5000/api/info`
 
 ### Functionalities
