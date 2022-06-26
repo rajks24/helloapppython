@@ -17,7 +17,7 @@ spec:
         app: helloapp
     spec:
       containers:
-      - image: reg.mykube.com:5001/repo/helloapppython:1.0
+      - image: ghcr.io/rajks24/helloapppython:1.0
         name: helloapppython
         ports:
         - containerPort: 8000
