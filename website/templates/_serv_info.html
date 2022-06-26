@@ -1,0 +1,17 @@
+<div class="col-lg-6 col-md-8 mx-auto">
+  <div class="card">
+    <h5 class="card-header">Server Info</h5>
+    <div class="card-body">
+      <table class="border-0 table table-sm table-striped">
+        <tbody class="border-light">
+          {%for k,v in serv_info.items()%}
+          <tr>
+            <td class="text-start">{{k.replace("_", " ")}}</td>
+            <td class="text-start">{{v}}</td>
+          </tr>
+          {%endfor%}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

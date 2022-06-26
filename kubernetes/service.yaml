@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: helloapp
+  name: helloapp
+  namespace: testns
+spec:
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 32380
+    port: 8080
+    protocol: TCP
+    targetPort: 8000
+  selector:
+    app: helloapp
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}

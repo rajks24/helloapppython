@@ -4,7 +4,11 @@ FROM python:3.9.13-slim
 RUN mkdir /app
 WORKDIR /app
 COPY requirements.txt requirements.txt
+RUN  pip install --upgrade pip
 RUN pip install -r requirements.txt
+
+## Adding environment variables
+ENV FLASK_APP=app.py
 
 # Copy the source from the current directory to the Working Directory inside the container
 COPY . .
