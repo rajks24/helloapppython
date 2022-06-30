@@ -35,11 +35,14 @@ and workflows.
 3. Get server info, once deployed on Kubernetes (on homepage and via api in json format)
 4. For running on Kubernetes, by using `kubectl kustomise` we can modify image (name & tag) and other configurable parans via updating kustomization.yaml in kubernetes folder.
 5. This app can be built in 3 ways
+
    5.1 With gunicorn WSGI server - Dockerfile added.
+   
    5.2 With python and Flask module only - Dockerfile added.
+   
    5.3 With buildpack,
 
-   - The build command can be overriden by adding Procfile
+   - The build command can be overriden by Procfile in root folder.
    - Other params can be passed as command line options in build command.
 
      ```
