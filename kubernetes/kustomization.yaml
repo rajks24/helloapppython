@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- deployment.yaml
+- service.yaml
+images:
+- name: ghcr.io/rajks24/helloapppython
+  newName: registry-lab.com/rsingh-lib/helloapp
+  newTag: b1.20220630.093451

@@ -1,20 +1,27 @@
-FROM python:3.9.13-slim
+FROM python:3.9-slim-bullseye
 
-# Make dir app and install dependencies
+# Extra python env
+ENV PYTHONDONTWRITEBYTECODE=0
+ENV PYTHONUNBUFFERED=1
+ENV PIP_DISABLE_PIP_VERSION_CHECK=1
+
+ENV VIRTUAL_ENV=/opt/venv
+RUN python3 -m venv $VIRTUAL_ENV
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+
+# pip modules determined from 'pip freeze' during local development
 RUN mkdir /app
 WORKDIR /app
-COPY requirements.txt requirements.txt
+
+COPY requirements.txt .
 RUN  pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN set -ex \
+    && pip install -r requirements.txt
 
-## Adding environment variables
-ENV FLASK_APP=app.py
-
-# Copy the source from the current directory to the Working Directory inside the container
 COPY . .
 
-# Expose port 8000 to the outside world
+# default docker port to expose, '-p' flag is used to same effect
 EXPOSE 8000
 
-# Run the executable
-CMD ["python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=8000"]
+# Launch gunicorn
+CMD [ "/opt/venv/bin/gunicorn", "--bind", ":8000", "--workers", "3", "app:app" ]
