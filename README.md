@@ -2,7 +2,7 @@
 
 Code language : Python
 
-App Version : v1.0
+App Version : v2.0
 
 ### Introduction
 
