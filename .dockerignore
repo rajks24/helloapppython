@@ -1,0 +1,7 @@
+myDockerfiles
+Dockerfile
+kubernetes
+.git*
+*.md
+.cache
+__pycache__

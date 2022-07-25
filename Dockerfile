@@ -1,5 +1,12 @@
 FROM python:3.9-slim-bullseye
 
+LABEL name="Helloapppython"
+LABEL version="1.0"
+LABEL description="The Helloapp with features to test devops and k8s clusters"
+
+ENV LC_ALL=C.UTF-8
+ENV LANG=C.UTF-8
+
 # Extra python env
 ENV PYTHONDONTWRITEBYTECODE=0
 ENV PYTHONUNBUFFERED=1
@@ -18,7 +25,7 @@ RUN  pip install --upgrade pip
 RUN set -ex \
     && pip install -r requirements.txt
 
-COPY . .
+COPY . /app
 
 # default docker port to expose, '-p' flag is used to same effect
 EXPOSE 8000
