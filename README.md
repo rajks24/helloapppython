@@ -1,6 +1,6 @@
 # Helloapppython
 
-![App Version : v1.0](https://img.shields.io/badge/version-1.0-green?style=flat-square) ![GitHub last commit](https://img.shields.io/github/last-commit/rajks24/helloapppython?style=flat-square) ![Python](https://img.shields.io/badge/python-3670A0?style=flat-square&logo=python&logoColor=ffdd54) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=flat-square&logo=docker&logoColor=white) ![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=flat-square&logo=kubernetes&logoColor=white)
+![App Version : v2.0](https://img.shields.io/badge/version-1.0-green?style=flat-square) ![GitHub last commit](https://img.shields.io/github/last-commit/rajks24/helloapppython?style=flat-square) ![Python](https://img.shields.io/badge/python-3670A0?style=flat-square&logo=python&logoColor=ffdd54) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=flat-square&logo=docker&logoColor=white) ![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=flat-square&logo=kubernetes&logoColor=white)
 
 <hr>
 

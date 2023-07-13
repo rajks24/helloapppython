@@ -17,6 +17,7 @@ README copy.md
 *.iws
 *.iml
 *.ipr
+venv
 
 ### NetBeans ###
 /nbproject/private/

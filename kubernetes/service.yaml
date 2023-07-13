@@ -15,7 +15,7 @@ spec:
   - nodePort: 32380
     port: 8080
     protocol: TCP
-    targetPort: 8000
+    targetPort: 80
   selector:
     app: helloapp
   sessionAffinity: None

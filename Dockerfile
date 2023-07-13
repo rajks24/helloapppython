@@ -28,7 +28,7 @@ RUN set -ex \
 COPY . /app
 
 # default docker port to expose, '-p' flag is used to same effect
-EXPOSE 8000
+EXPOSE 80
 
 # Launch gunicorn
-CMD [ "/opt/venv/bin/gunicorn", "--bind", ":8000", "--workers", "3", "app:app" ]
+CMD [ "/opt/venv/bin/gunicorn", "--bind", ":80", "--workers", "3", "app:app" ]

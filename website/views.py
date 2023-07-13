@@ -58,8 +58,8 @@ def getAppVersion() -> str:
     try:
         with open(readme, 'r') as f:
             data = f.readlines()
-        appVer = [x.rstrip('\n').split(" ")[-1]
-                  for x in data if 'Version' in x][0]
+        appVer = [x.rstrip('\n').split(":")[1].split("]")
+                  for x in data if 'Version' in x][0][0]
     except IndexError:
         logger.error(
             'README.md file is missing or with no "App Version" in the source code')
