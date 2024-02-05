@@ -1,1 +1,1 @@
-web: gunicorn --bind ":80" --workers=3 app:app
+web: gunicorn --bind ":8080" --workers=3 app:app
