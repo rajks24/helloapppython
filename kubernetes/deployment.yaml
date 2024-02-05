@@ -20,7 +20,7 @@ spec:
       - image: ghcr.io/rajks24/helloapppython:1.0
         name: helloapppython
         ports:
-        - containerPort: 80
+        - containerPort: 8080
         env:
         - name: NODE_NAME
           valueFrom:
